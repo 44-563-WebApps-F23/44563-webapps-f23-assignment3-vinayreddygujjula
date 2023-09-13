@@ -102,13 +102,11 @@
         <blockquote>How to newline in HTML Button?</blockquote>
         <a href="https://stackoverflow.com/questions/38048131/how-to-newline-in-html-button">quick link to open above page  </a>
         <h5>
-            Stop IE Page Load Flicker
+            Removing Jetpack CSS
         </h5>
         <pre>
-            &lt;!--[if IE]>
-            &lt;meta http-equiv="Page-Enter" content="blendTrans(duration=0)" />
-            &lt;meta http-equiv="Page-Exit" content="blendTrans(duration=0)" />
-            &lt;![endif]-->
+            add_filter( 'jetpack_sharing_counts', '__return_false', 99 );
+            add_filter( 'jetpack_implode_frontend_css', '__return_false', 99 );
         </pre>
     </body>
 </html>
